@@ -17,4 +17,9 @@ public class UserService {
     public List<UserModel> listarUsuarios(){
         return userRepository.findAll();
     }
+
+    // Metodo para criar usuario
+    public UserModel criarUsuario(UserModel user){
+        return userRepository.save(user);
+    }
 }
